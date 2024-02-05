@@ -1,6 +1,3 @@
-package comportamentais;
-
-
 import comportamentais.chain_reponsibility.CalculadoraDePontos;
 import comportamentais.chain_reponsibility.Pedido;
 
