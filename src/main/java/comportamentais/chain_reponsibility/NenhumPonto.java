@@ -1,6 +1,6 @@
 package comportamentais.chain_reponsibility;
 
-public class NenhumPonto implements CalculadorDePontos{
+public class NenhumPonto implements CalculadorDePontos {
     @Override
     public int calcular(Pedido pedido) {
         return 0;
@@ -8,6 +8,6 @@ public class NenhumPonto implements CalculadorDePontos{
 
     @Override
     public CalculadorDePontos setProximo(CalculadorDePontos proximo) {
-        return null;
+        throw new UnsupportedOperationException("Operação  não implementada");
     }
 }

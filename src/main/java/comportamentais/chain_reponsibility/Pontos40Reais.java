@@ -1,19 +1,33 @@
 package comportamentais.chain_reponsibility;
 
-public class Pontos40Reais implements CalculadorDePontos{
+public class Pontos40Reais implements CalculadorDePontos {
 
-    private CalculadorDePontos proximo;
+    public static final int QUARENTA_REAIS = 40;
+    public static final int OITENTA_REAIS = 80;
+    private CalculadorDePontos proximoCalculadorDePontos;
 
     @Override
-    public int calcular(Pedido pedido) {
-        if (pedido.getValor() > 40 && pedido.getValor() < 80)
-            return (int) pedido.getValor() / 2;
+    public int calcular(final Pedido aPedido) {
+        if (isValorMaiorQue40ReaisEMenorQue80Reais(aPedido))
+            return (int) aPedido.getValor() / 2;
 
-        return this.proximo.calcular(pedido);
+        return this.proximoCalculadorDePontos.calcular(aPedido);
+    }
+
+    private static boolean isValorMaiorQue40ReaisEMenorQue80Reais(final Pedido aPedido) {
+        return isValorMaiorQue40Reais(aPedido) && isValorMenorQue80Reais(aPedido);
+    }
+
+    private static boolean isValorMenorQue80Reais(final Pedido aPedido) {
+        return aPedido.getValor() < OITENTA_REAIS;
+    }
+
+    private static boolean isValorMaiorQue40Reais(final Pedido aPedido) {
+        return aPedido.getValor() > QUARENTA_REAIS;
     }
 
     @Override
-    public CalculadorDePontos setProximo(CalculadorDePontos proximo) {
-        return this.proximo = proximo;
+    public CalculadorDePontos setProximo(final CalculadorDePontos aProximoCalculadorDePontos) {
+        return this.proximoCalculadorDePontos = aProximoCalculadorDePontos;
     }
 }

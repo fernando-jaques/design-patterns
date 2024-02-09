@@ -4,8 +4,8 @@ public class DesligarLampada implements Command {
 
     private Lampada lampada;
 
-    public DesligarLampada(Lampada lampada) {
-        this.lampada = lampada;
+    public DesligarLampada(final Lampada aLampada) {
+        this.lampada = aLampada;
     }
 
     @Override

@@ -15,6 +15,6 @@ public class Lampada {
     }
 
     public void mudarEstato() {
-     this.ligada = !this.ligada;
+        this.ligada = !this.ligada;
     }
 }

@@ -4,8 +4,8 @@ public class LigarLampada implements Command {
 
     private Lampada lampada;
 
-    public LigarLampada(Lampada lampada) {
-        this.lampada = lampada;
+    public LigarLampada(Lampada aLampada) {
+        this.lampada = aLampada;
     }
 
     @Override

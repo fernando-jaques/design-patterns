@@ -2,7 +2,7 @@ package comportamentais.chain_reponsibility;
 
 public class CalculadoraDePontos {
 
-    public static int calcular(Pedido pedido) {
+    public static int calcular(final Pedido pedido) {
 
         var pontos20Reais = new Pontos20Reais();
         var pontos40Reais = new Pontos40Reais();

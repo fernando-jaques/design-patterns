@@ -2,18 +2,23 @@ package comportamentais.chain_reponsibility;
 
 public class Pontos80Reais implements CalculadorDePontos {
 
-    private CalculadorDePontos proximo;
+    public static final int OUTENTA_REAIS = 80;
+    private CalculadorDePontos proximoCalculadorDePontos;
 
     @Override
-    public int calcular(Pedido pedido) {
-        if (pedido.getValor() >= 80)
-            return (int) pedido.getValor() / 2;
+    public int calcular(final Pedido aPedido) {
+        if (isValorPedidoMaiorQue30Reais(aPedido))
+            return (int) aPedido.getValor() / 2;
 
-        return this.proximo.calcular(pedido);
+        return this.proximoCalculadorDePontos.calcular(aPedido);
+    }
+
+    private static boolean isValorPedidoMaiorQue30Reais(final Pedido aPedido) {
+        return aPedido.getValor() >= OUTENTA_REAIS;
     }
 
     @Override
-    public CalculadorDePontos setProximo(CalculadorDePontos proximo) {
-        return this.proximo = proximo;
+    public CalculadorDePontos setProximo(final CalculadorDePontos aProximoCalculadorDePontos) {
+        return this.proximoCalculadorDePontos = aProximoCalculadorDePontos;
     }
 }
