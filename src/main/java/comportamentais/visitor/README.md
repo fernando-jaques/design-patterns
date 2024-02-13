@@ -66,17 +66,17 @@ e abrir brechas para o surgimento de bugs.
   Portanto, o principal fator a ser analisado antes da aplicação do
   padrão Visitor:
 
-  * Se é mais provável que se altere o algoritmo aplicado sobre uma
-    estrutura de objetos, o padrão Visitor é uma boa solução. Neste
-    caso a hierarquia de objetos é estável, mesmo que seja preciso
-    adicionar operações continuamente ou alterar algoritmos, o
-    padrão Visitor ajudará a gerenciar tais alterações.
-  * Se é mais provável que se altere as classes de objetos que
-    compõem a estrutura (ElementoConcreto) o padrão Visitor poderá
-    ser difícil de se manter. Neste caso é melhor adicionar as novas
-    funcionalidades na própria classe que compõem a estrutura
-    (ElementoConcreto).
-  
+    * Se é mais provável que se altere o algoritmo aplicado sobre uma
+      estrutura de objetos, o padrão Visitor é uma boa solução. Neste
+      caso a hierarquia de objetos é estável, mesmo que seja preciso
+      adicionar operações continuamente ou alterar algoritmos, o
+      padrão Visitor ajudará a gerenciar tais alterações.
+    * Se é mais provável que se altere as classes de objetos que
+      compõem a estrutura (ElementoConcreto) o padrão Visitor poderá
+      ser difícil de se manter. Neste caso é melhor adicionar as novas
+      funcionalidades na própria classe que compõem a estrutura
+      (ElementoConcreto).
+
 
 * Estado acumulativo. Os Visitors podem acumular estados à medida que
   visitam cada elemento na estrutura do objeto. Sem um Visitor, esse

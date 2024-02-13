@@ -42,36 +42,36 @@ fornecedores são os observers.
 
 
 * Quando um objeto deve ser capaz de notificar outros objetos sem os
-conhecer, ou seja, tais objetos não podem ser fortemente acoplados.
+  conhecer, ou seja, tais objetos não podem ser fortemente acoplados.
 
 ### Consequências
 
 * O padrão Observer permite variar assuntos (subject) e observadores
-(observers) de forma independente. É possível reutilizar assuntos sem
-reutilizar seus observadores e vice-versa. Também permite adicionar
-observadores sem modificar o assunto ou outros observadores.
+  (observers) de forma independente. É possível reutilizar assuntos sem
+  reutilizar seus observadores e vice-versa. Também permite adicionar
+  observadores sem modificar o assunto ou outros observadores.
 
 
 * Acoplamento abstrato entre Assunto e Observador. Tudo que um assunto
-sabe é que ele possui uma lista de observadores, cada um em
-conformidade com a interface Observer. O assunto não conhece a classe
-concreta de nenhum observador. Assim, o acoplamento entre assunto e
-seus observadores é abstrato e mínimo.
+  sabe é que ele possui uma lista de observadores, cada um em
+  conformidade com a interface Observer. O assunto não conhece a classe
+  concreta de nenhum observador. Assim, o acoplamento entre assunto e
+  seus observadores é abstrato e mínimo.
 
 
 * Suporte para comunicação via broadcast. Ao contrário de uma
-solicitação comum, a notificação que um assunto envia não precisa
-especificar seu destinatário. A notificação é transmitida
-automaticamente para todos os objetos observadores que se inscreveram.
-O assunto  não se importa com quantos objetos interessados existem, sua única responsabilidade é notificar seus
-observadores. Isso lhe dá a liberdade de adicionar e remover
-observadores a qualquer momento. Cabe ao observador manipular ou
-ignorar uma notificação.
+  solicitação comum, a notificação que um assunto envia não precisa
+  especificar seu destinatário. A notificação é transmitida
+  automaticamente para todos os objetos observadores que se inscreveram.
+  O assunto não se importa com quantos objetos interessados existem, sua única responsabilidade é notificar seus
+  observadores. Isso lhe dá a liberdade de adicionar e remover
+  observadores a qualquer momento. Cabe ao observador manipular ou
+  ignorar uma notificação.
 
 
 * Pode causar atualizações inesperadas. Como os observadores não se
-conhecem, uma operação simples sobre o assunto pode causar uma
-cascata de atualizações em seus observadores e seus objetos
-dependentes. Além disso, critérios de dependência que não são bem
-gerenciados geralmente levam a atualizações desnecessárias, que podem
-ser difíceis de rastrear.
+  conhecem, uma operação simples sobre o assunto pode causar uma
+  cascata de atualizações em seus observadores e seus objetos
+  dependentes. Além disso, critérios de dependência que não são bem
+  gerenciados geralmente levam a atualizações desnecessárias, que podem
+  ser difíceis de rastrear.

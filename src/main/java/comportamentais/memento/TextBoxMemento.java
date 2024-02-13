@@ -10,14 +10,6 @@ public class TextBoxMemento implements Memento {
     private final String textAling;
     private final String fontWeigth;
 
-    @Override
-    public void restaurar() {
-        originador.setPosition(x, y);
-        originador.setFontFamily(fontFamily);
-        originador.setFontWeigth(fontWeigth);
-        originador.setTextAling(textAling);
-    }
-
     public TextBoxMemento(TextBox textBox, int x, int y, String fontFamily, String textAling, String fontWeigth) {
         this.originador = textBox;
         this.x = x;
@@ -25,5 +17,13 @@ public class TextBoxMemento implements Memento {
         this.fontFamily = fontFamily;
         this.textAling = textAling;
         this.fontWeigth = fontWeigth;
+    }
+
+    @Override
+    public void restaurar() {
+        originador.setPosition(x, y);
+        originador.setFontFamily(fontFamily);
+        originador.setFontWeigth(fontWeigth);
+        originador.setTextAling(textAling);
     }
 }

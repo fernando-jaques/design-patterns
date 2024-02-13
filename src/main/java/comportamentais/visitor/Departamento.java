@@ -5,9 +5,8 @@ import java.util.List;
 
 public class Departamento implements Elemento {
 
-    private String nome;
-
     private final List<Produto> produtos;
+    private String nome;
 
     public Departamento(String nome) {
         this.nome = nome;

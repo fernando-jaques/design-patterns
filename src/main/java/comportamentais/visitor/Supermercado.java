@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Supermercado implements Elemento {
-    private String nome;
     private final List<Departamento> departamentos;
+    private String nome;
 
     public Supermercado(String nome) {
         this.nome = nome;

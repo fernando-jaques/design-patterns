@@ -18,7 +18,6 @@ família de algoritmos.
 
 ### Aplicabilidade (Quando utilizar?)
 
-
 * O padrão é aplicado quando muitas classes fazem a mesma coisa de forma diferente.
 
 
@@ -28,7 +27,7 @@ família de algoritmos.
 * Quando é necessário evitar a exposição de dados ou sensíveis os quais clientes não podem ter conhecimento.
 
 
-* Remoção de operadores condicionais que determinam o comportamento do  algoritmo com base em objetos diferentes.
+* Remoção de operadores condicionais que determinam o comportamento do algoritmo com base em objetos diferentes.
 
 ### Consequências
 

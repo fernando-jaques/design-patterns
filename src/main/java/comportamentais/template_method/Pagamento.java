@@ -5,9 +5,11 @@ public abstract class Pagamento {
     private double valor;
     private Gateway gateway;
 
-    protected double calcularTaxa(){
+    protected double calcularTaxa() {
         return 0;
-    };
+    }
+
+    ;
 
     protected double calcularDesconto() {
         return 0;

@@ -7,7 +7,6 @@ sem alterar a estrutura do mesmo.
 
 ### Motivação (Por que utilizar?)
 
-
 O padrão Template Method auxilia na definição de um algoritmo que
 contém algumas de suas partes definidas por métodos abstratos. Subclasses
 são responsáveis por implementar as partes abstratas deste algoritmo. Tais
