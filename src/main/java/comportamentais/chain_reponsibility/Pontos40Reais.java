@@ -6,14 +6,6 @@ public class Pontos40Reais implements CalculadorDePontos {
     public static final int OITENTA_REAIS = 80;
     private CalculadorDePontos proximoCalculadorDePontos;
 
-    @Override
-    public int calcular(final Pedido aPedido) {
-        if (isValorMaiorQue40ReaisEMenorQue80Reais(aPedido))
-            return (int) aPedido.getValor() / 2;
-
-        return this.proximoCalculadorDePontos.calcular(aPedido);
-    }
-
     private static boolean isValorMaiorQue40ReaisEMenorQue80Reais(final Pedido aPedido) {
         return isValorMaiorQue40Reais(aPedido) && isValorMenorQue80Reais(aPedido);
     }
@@ -24,6 +16,14 @@ public class Pontos40Reais implements CalculadorDePontos {
 
     private static boolean isValorMaiorQue40Reais(final Pedido aPedido) {
         return aPedido.getValor() > QUARENTA_REAIS;
+    }
+
+    @Override
+    public int calcular(final Pedido aPedido) {
+        if (isValorMaiorQue40ReaisEMenorQue80Reais(aPedido))
+            return (int) aPedido.getValor() / 2;
+
+        return this.proximoCalculadorDePontos.calcular(aPedido);
     }
 
     @Override
