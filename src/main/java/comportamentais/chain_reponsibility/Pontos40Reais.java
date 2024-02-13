@@ -30,4 +30,5 @@ public class Pontos40Reais implements CalculadorDePontos {
     public CalculadorDePontos setProximo(final CalculadorDePontos aProximoCalculadorDePontos) {
         return this.proximoCalculadorDePontos = aProximoCalculadorDePontos;
     }
+
 }
