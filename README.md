@@ -8,7 +8,7 @@ tem uma "cara" já conhecida que aparece rotineiramente em projetos de contextos
 Os padrões de projetos são classificado em 3 grupos:
 
 - ### **Criacionais**
-    - [Abstract Factory](src/main/java/criacionais/abstract_method)
+    - [Abstract Factory](src/main/java/criacionais/abstract_factory)
     - [Builder](src/main/java/criacionais/builder)
     - [Factory Method](src/main/java/criacionais/factory_method)
     - [Prototype](src/main/java/criacionais/prototype)

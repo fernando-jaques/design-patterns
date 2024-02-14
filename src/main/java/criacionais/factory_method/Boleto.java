@@ -11,5 +11,17 @@ public class Boleto {
         this.valor = valor;
     }
 
+    public float calcularMulta() {
+        return this.valor * this.multa;
+    }
+
+    public float calcularJuros() {
+        return this.valor * this.juros;
+    }
+
+    public float calcularDesconto() {
+        return this.valor * this.desconto;
+    }
+
 
 }
